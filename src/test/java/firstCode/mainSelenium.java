@@ -1,6 +1,7 @@
 package firstCode;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
+import org.example.Profile;     // do not write this line
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -16,6 +17,7 @@ public class mainSelenium {
         // Additional setup to prevent existing chrome settings from causing problems
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--remote-allow-origins=*");
+        Profile.profileOptions(options);        // <- do not write this line
 
         // Special object that can control my web browser
         WebDriver driver = new ChromeDriver(options);
