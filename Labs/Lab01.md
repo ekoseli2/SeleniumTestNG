@@ -1,5 +1,10 @@
-##Task 1
+## Task 1 - etsyTest.java
 
-Go to https://www.etsy.com/ Maximize window
+1. Go to https://www.etsy.com/ 
+2. Maximize window
 
-##Task 2 Go to https://www.amazon.com/ get title and print out
+## Task 2 - amazonTest.java
+
+1. Go to https://www.amazon.com/ 
+2. get title  
+3. print out title to console

@@ -1,10 +1,10 @@
 ## About this Repository
 Using this repository you may:
-1. [ ] Fork or Clone the entire repository to work on the _Labs_ and _Lecture Notes_
-2. [ ] Labs are homework to solve after class. You must complete them to ensure your understanding of course topics.
-3. [ ] Lecture Notes are provided just to review the concept of the lecture.
-4. [ ] All lecture code is to be placed into a src/test/java/<lessonName> package to separate your code day-by-day. Make sure to place each lecture's code into a separate package.
-5. [ ] Similarly, Labs will also be placed in a src/test/java/<labName> package where the labName is the specific lab you are assigned that day (example "Lab03").
+* Fork or Clone the entire repository to work on the _Labs_ and _Lecture Notes_
+* Labs are homework to solve after class. You must complete them to ensure your understanding of course topics.
+* Lecture Notes are provided just to review the concept of the lecture.
+* All lecture code is to be placed into a src/test/java/lessonName package to separate your code day-by-day. Make sure to place each lecture's code into a separate package.
+* Similarly, Labs will also be placed in a src/test/java/labName package where the labName is the specific lab you are assigned that day (example "Lab03").
 
 ## Selenium Tutorial
 
