@@ -18,7 +18,7 @@ public class mainSelenium {
         options.addArguments("--remote-allow-origins=*");
 
         // Special object that can control my web browser
-        WebDriver driver = new ChromeDriver();
+        WebDriver driver = new ChromeDriver(options);
 
         // navigate to facebook on google chrome
         String facebookURL = "https://www.facebook.com/";
