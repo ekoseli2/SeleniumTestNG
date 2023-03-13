@@ -9,5 +9,8 @@
         <module name="SeleniumDemo" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="SeleniumTestNG" target="17" />
+    </bytecodeTargetLevel>
   </component>
 </project>
