@@ -18,7 +18,8 @@ public class BrowserNavigationBasics {
         String amazonURL = "https://www.amazon.com/";
         driver.get(amazonURL);
 
-
-
+        // close the window
+        driver.close();
+        // extra commit
     }
 }
