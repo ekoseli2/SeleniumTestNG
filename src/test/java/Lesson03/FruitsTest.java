@@ -7,7 +7,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 
-public class LinkTestLocator {
+public class FruitsTest {
     public static void main(String[] args) throws InterruptedException {
         // create the driver instance
         WebDriverManager.chromedriver().setup();
@@ -16,21 +16,13 @@ public class LinkTestLocator {
         Profile.profileOptions(options);        // don't write this line
         WebDriver driver = new ChromeDriver(options);
 
-        // maximize window
-        driver.manage().window().maximize();
+        // Opens fruits html on my computer, your path will be different
+        driver.get("C:\\Users\\HP\\IdeaProjects\\SeleniumTestNG\\src\\Fruits.html");
 
-        // go to google.com and then press the gmail link
-        driver.get("https://google.com");
-        Thread.sleep(1000);
+        // Click mango 3 using value banana from the html
+        driver.findElement(By.xpath("//input[@value='Banana']")).click();
 
-        // find the Link Text = gmail and click it
-        driver.findElement(By.linkText("Images")).click();
-        Thread.sleep(3000);
-
-        driver.findElement(By.partialLinkText("Sign")).click();
-        Thread.sleep(3000);
-
-
-        driver.close();
+        // Click the Potato button with xpath
+        driver.findElement(By.xpath("//input[@value='Potato']")).click();
     }
 }

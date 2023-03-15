@@ -34,9 +34,15 @@ public class IdAmazonLocator {
 
         // search "iphone 14 pro max phone case"
         driver.findElement(By.id("twotabsearchtextbox")).sendKeys("iphone 14 pro max phone case");
-        driver.findElement(By.id("nav-search-submit-button")).click();
+        driver.findElement(By.xpath("//input[@value='Go']")).click();
 
-        Thread.sleep(8000);
+        // Xpath looks like this: By.xpath("//input[@what am I looking for = 'value')
+
+        Thread.sleep(3000);
+
+        // check my shopping cart using the class attribute
+        driver.findElement(By.className("nav-cart-count")).click();
+        Thread.sleep(3000);
 
         driver.quit();
     }
