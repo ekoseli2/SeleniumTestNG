@@ -28,7 +28,7 @@ public class ImplicitWait {
             driver.navigate().to("https://vinexponewyork.com");
 
             // make an implicit wait to force your driver to not perform the test until after the element is on the page
-            //driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
+            driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
 
 
             WebElement percent = driver.findElement(By.xpath("/html/body/div[@class='elementor elementor-585']/div[@class='elementor-inner']/div/section[3]//div[@class='elementor-row']/div[4]//div[@class='elementor-element elementor-element-0e178a7 elementor-widget elementor-widget-counter']//span[@class='elementor-counter-number']"));
