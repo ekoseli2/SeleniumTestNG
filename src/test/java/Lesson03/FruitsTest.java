@@ -23,6 +23,6 @@ public class FruitsTest {
         driver.findElement(By.xpath("//input[@value='Banana']")).click();
 
         // Click the Potato button with xpath
-        driver.findElement(By.xpath("//input[@value='Potato']")).click();
+        driver.findElement(By.xpath("//input[@name='group2']")).click();
     }
 }

@@ -24,7 +24,9 @@ public class getTextGmail {
 
         // store a web element as an object
         WebElement gmailLink = driver.findElement(By.linkText("Gmail"));
+        // getText method to get the text out of an element
         System.out.println("Gmail button Text contains " + gmailLink.getText());
+
         System.out.println("Gmail button class attribute value is " + gmailLink.getAttribute("class"));
     }
 }
