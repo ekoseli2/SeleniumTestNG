@@ -8,7 +8,7 @@ import org.openqa.selenium.chrome.ChromeOptions;
 
 public class CheckBoxTest {
     // setup my chrome driver before starting
-    public static void main(Sting[] args) {
+    public static void main(String[] args) {
         WebDriverManager.chromedriver().setup();
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--remote-allow-origins=*");
