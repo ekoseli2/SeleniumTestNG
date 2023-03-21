@@ -1,10 +1,8 @@
 package Lesson05_TestNG;
 
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.Test;
+import org.testng.annotations.*;
 
-public class TestNGIntro {
+public class c1_TestNGIntro {
     // What to do before any of the tests. This is the first method which executes in any TestNG file
     @BeforeClass
     public void setup() {
@@ -15,6 +13,14 @@ public class TestNGIntro {
     public void cleanup() {
         // certain statements like driver.close
         System.out.println("After class is running");
+    }
+    @BeforeMethod
+    public void beforeMethod() {
+        System.out.println("Before method is running");
+    }
+    @AfterMethod
+    public void afterMethod() {
+        System.out.println("After method is running");
     }
     @Test(priority = 3)
     public void test1() {
