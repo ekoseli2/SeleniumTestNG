@@ -4,6 +4,8 @@ import Utilities.WebDriverUtil;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.Select;
+import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -33,5 +35,15 @@ public class c2_DropDown {
         // Click on the dropdown
         driver.findElement(By.xpath("//a[@href='/dropdown']")).click();
         WebElement dropDownBox = driver.findElement(By.id("dropdown"));
+        // confirm that the default value is "Please select an option"
+        Select dropDownOptions = new Select(dropDownBox);
+        // test cases
+        String expectedDefaultOption = "Please select an option";
+        String actualDefaultOption = dropDownOptions.getFirstSelectedOption().getText();
+        Assert.assertEquals(actualDefaultOption, expectedDefaultOption, "The verification has failed");
+    }
+    @Test
+    public void verifyOptions() {
+
     }
 }
