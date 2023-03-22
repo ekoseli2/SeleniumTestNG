@@ -43,7 +43,23 @@ public class c2_DropDown {
         Assert.assertEquals(actualDefaultOption, expectedDefaultOption, "The verification has failed");
     }
     @Test
-    public void verifyOptions() {
+    public void verifyOptions() throws InterruptedException {
+        // Second test which verifies the options one at a time
+        // Click on the dropdown
+        driver.findElement(By.xpath("//a[@href='/dropdown']")).click();
+        WebElement dropDownBox = driver.findElement(By.id("dropdown"));
 
+        // confirm that the default value is "Please select an option"
+        Select dropDownOptions = new Select(dropDownBox);
+        Thread.sleep(2000);
+
+        dropDownOptions.selectByIndex(2);
+        Thread.sleep(2000);
+
+        dropDownOptions.selectByVisibleText("Option 1");
+        Thread.sleep(2000);
+
+        dropDownOptions.selectByValue("2");
+        Thread.sleep(2000);
     }
 }
