@@ -4,6 +4,7 @@ import Utilities.WebDriverUtil;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -45,6 +46,10 @@ public class c3_SmartBearLogin {
         logIn.click();
         Thread.sleep(6000);
 
+        // verifications
+        String actualTitle = driver.getTitle();
+        String expectedTitle = "Web Orders";
 
+        Assert.assertEquals(actualTitle, expectedTitle);
     }
 }
