@@ -47,12 +47,24 @@ public class day_04_LocatorsContinued {
 
         for (int i=0; i<linkCount; i++){
 
-            WebElement each=categories.get(i);
-            each.click();
-            driver.navigate().back();
+//            WebElement each=categories.get(i);
+//            each.click();
+//            driver.navigate().back();
+//
+//            driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
 
-            driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
 
+            int randomIndex=(int) Math.floor(Math.random() * linkCount);
+            System.out.println(randomIndex);
+            //
+            WebElement element=categories.get(randomIndex);
+            System.out.println(element.getText());
+
+            //Lets click to randomized element
+            element.click();
+            //Navigate back
+            Thread.sleep(3000);
+            categories=driver.findElements(By.cssSelector("ul[data-ui='top-nav-category-list'] li a"));
         }
     }
 
