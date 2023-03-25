@@ -14,6 +14,9 @@ public class WebDriverUtil {
             // we can also make chrome options
             ChromeOptions options = new ChromeOptions();
             options.addArguments("--remote-allow-origins=*");
+            // dont add the two lines below
+            options.addArguments("--user-data-dir=C:\\Users\\HP\\AppData\\Local\\Google\\Chrome\\User Data");
+            options.addArguments("--profile-directory=Profile 4");
             return new ChromeDriver(options);
         } else if (browser.equalsIgnoreCase("firefox")) {
             WebDriverManager.firefoxdriver().setup();

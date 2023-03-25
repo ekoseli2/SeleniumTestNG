@@ -49,8 +49,6 @@ public class AmazonVerification {
         }
         System.out.println("Amazon's title is: " + actualTitle);
 
-
-
         // close the web browser
         driver.quit();
 
