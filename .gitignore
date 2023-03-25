@@ -2,4 +2,4 @@
 /target/
 /.idea/
 /src/main/
-/WebDriverUtil.java
+/src/test/java/Utilities/WebDriverUtil.java
