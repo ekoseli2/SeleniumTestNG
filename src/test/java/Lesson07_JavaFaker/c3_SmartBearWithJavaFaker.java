@@ -73,7 +73,7 @@ public class c3_SmartBearWithJavaFaker {
         streetName.sendKeys(faker.address().streetName());
         city.sendKeys(faker.address().city());
         state.sendKeys(faker.address().state());
-        zip.sendKeys(faker.address().zipCode().replaceAll("-","");
+        zip.sendKeys(faker.address().zipCode().replaceAll("-",""));
 
         // 10) click on the visa radio button
         driver.findElement(By.id("ctl00_MainContent_fmwOrder_cardList_0")).click();
