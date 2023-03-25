@@ -92,7 +92,7 @@ public class c3_SmartBearWithJavaFaker {
 
         // 14) verify success message "New order has been successfully added."
         WebElement successMessage = driver.findElement(By.tagName("strong"));
-        Assert.assertEquals(successMessage.getText(), "New order has been successfully added");
+        Assert.assertEquals(successMessage.getText(), "New order has been successfully added.");
 }
 
 }
