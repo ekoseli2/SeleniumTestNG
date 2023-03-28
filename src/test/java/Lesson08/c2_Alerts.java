@@ -2,8 +2,10 @@ package Lesson08;
 
 import Utilities.BrowserUtils;
 import Utilities.WebDriverUtil;
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -40,10 +42,20 @@ WebDriver driver;
         // click alert box id="Alert BoxI"
         driver.findElement(By.id("Alert BoxI")).click();
         // click the first 'click me' button id="alert-demo"
-        driver.findElement(By.id("alert-demo")).click();
+        WebElement clickMe = driver.findElement(By.id("alert-demo"));
+        clickMe.click();
         BrowserUtils.wait(3);
 
         // handle the alert
+        Alert alert = driver.switchTo().alert();
+        // Accept the message from the alert
+        alert.accept();
+        BrowserUtils.wait(3);
+
+        // Decline the message from the alert
+        clickMe.click();
+        BrowserUtils.wait(3);
+        alert.dismiss();
 
     }
 
