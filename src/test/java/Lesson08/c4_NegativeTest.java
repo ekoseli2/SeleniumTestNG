@@ -25,7 +25,7 @@ public class c4_NegativeTest {
 
     @AfterMethod
     public void cleanUp() {
-        // driver.quit();
+         driver.quit();
     }
     @Test (dataProvider = "myLibrary")
     public void negativeLoginTest(String userID, String passID) {
