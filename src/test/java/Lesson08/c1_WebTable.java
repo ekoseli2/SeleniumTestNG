@@ -2,7 +2,7 @@ package Lesson08;
 
 import Utilities.BrowserUtils;
 import Utilities.WebDriverUtil;
-import Utilities.smartbearUtils;
+import Utilities.SmartbearUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -34,7 +34,7 @@ public class c1_WebTable {
 
     @Test
     public void tableTest() {
-        smartbearUtils.loginForSmartbearUtil(driver);
+        SmartbearUtils.loginForSmartbearUtil(driver);
         BrowserUtils.wait(3);
         // This is the format to find table values in selenium
         // table element/table path/ table row/ table cell

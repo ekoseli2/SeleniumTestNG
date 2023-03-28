@@ -1,7 +1,7 @@
 package Lesson08;
 
 import Utilities.WebDriverUtil;
-import Utilities.smartbearUtils;
+import Utilities.SmartbearUtils;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -29,7 +29,7 @@ public class c4_NegativeTest {
     }
     @Test (dataProvider = "myLibrary")
     public void negativeLoginTest(String userID, String passID) {
-        smartbearUtils.negativeLoginForSmartbearUtil(driver, userID, passID);
+        SmartbearUtils.negativeLoginForSmartbearUtil(driver, userID, passID);
     }
 
     @DataProvider (name = "myLibrary")

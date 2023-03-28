@@ -1,7 +1,7 @@
 package Lesson07_JavaFaker;
 
 import Utilities.WebDriverUtil;
-import Utilities.smartbearUtils;
+import Utilities.SmartbearUtils;
 import com.github.javafaker.Faker;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
@@ -48,7 +48,7 @@ public class c3_SmartBearWithJavaFaker {
     @Test
     public void tc1_LoginForSmartBear() throws InterruptedException {
         // 3-5 will be completed with our utility class method
-        smartbearUtils.loginForSmartbearUtil(driver);
+        SmartbearUtils.loginForSmartbearUtil(driver);
         // 6) Click the order button
         driver.findElement(By.xpath("//a[@href='Process.aspx']")).click();
        //  7) Select the "family album", choose 5 of these
