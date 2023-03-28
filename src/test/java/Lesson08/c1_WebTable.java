@@ -44,16 +44,4 @@ public class c1_WebTable {
         String expectedStreet = "9, Maple Valley";
         Assert.assertEquals(actualStreet, expectedStreet, "Street name verification failed");
     }
-    @Test
-    public void tableTest2() {
-        smartbearUtils.loginForSmartbearUtil(driver);
-        BrowserUtils.wait(3);
-        // This is the format to find table values in selenium
-        // table element/table path/ table row/ table cell
-        WebElement markStreet = driver.findElement(By.xpath("//table[@class='SampleTable']/tbody/tr[3]/td[6]"));
-        System.out.println("Mark's street address is " + markStreet.getText());
-        String actualStreet = markStreet.getText();
-        String expectedStreet = "9, Maple Valley";
-        Assert.assertEquals(actualStreet, expectedStreet, "Street name verification failed");
-    }
 }
