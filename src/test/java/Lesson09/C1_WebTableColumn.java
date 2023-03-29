@@ -6,6 +6,7 @@ import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import java.time.Duration;
@@ -32,11 +33,20 @@ public class C1_WebTableColumn {
         Assert.assertEquals(driver.getTitle(), "Web Orders");
     }
 
-    @Test
-    public void streetVerificationTest() {
+    @Test(dataProvider = "Street Name Library")
+    public void streetVerificationTest(String streetName) {
         // Verify that the given street exists on the web table
         SmartbearUtils.loginForSmartbearUtil(driver);
-        SmartbearUtils.verifyStreetUtil(driver, "7, Flower Street");
+        SmartbearUtils.verifyStreetUtil(driver, streetName);
+    }
 
+    @DataProvider(name = "Street Name Library")
+    public static Object[][] test() {
+        return new Object[][] {
+                {"7, Flower Street"},
+                {"23, Owk Street"},
+                {"fake address"},
+                {"17, Park Avenue"}
+        };
     }
 }
