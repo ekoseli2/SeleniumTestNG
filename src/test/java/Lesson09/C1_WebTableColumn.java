@@ -4,6 +4,7 @@ import Utilities.SmartbearUtils;
 import Utilities.WebDriverUtil;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
@@ -19,6 +20,10 @@ public class C1_WebTableColumn {
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
         driver.get("http://secure.smartbearsoftware.com/samples/testcomplete12/WebOrders/login.aspx");
     }
+    @AfterMethod
+    public void cleanUp() {
+        driver.quit();
+    }
 
     @Test
     public void loginTest() {
@@ -30,5 +35,8 @@ public class C1_WebTableColumn {
     @Test
     public void streetVerificationTest() {
         // Verify that the given street exists on the web table
+        SmartbearUtils.loginForSmartbearUtil(driver);
+        SmartbearUtils.verifyStreetUtil(driver, "7, Flower Street");
+
     }
 }

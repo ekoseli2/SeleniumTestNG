@@ -34,9 +34,12 @@ public class SmartbearUtils {
 
         List<WebElement> streetList = driver.findElements(By.xpath("//table[@id='ctl00_MainContent_orderGrid']//tr/td[6]"));
         // notice that this does not hold the values of a single table cell, it holds the entire column since <tr> does not have an index
+        System.out.println("All the streets on the table are:");
         for (WebElement street : streetList) {
+            System.out.println(street.getText());
             if (street.getText().equals(streetName)) {
                 Assert.assertTrue(true);
+                System.out.println(streetName + " was found in the table");
                 return;
             }
         }
