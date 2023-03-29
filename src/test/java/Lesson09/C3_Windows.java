@@ -4,6 +4,8 @@ import Base.TestBase;
 import org.openqa.selenium.By;
 import org.testng.annotations.Test;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Set;
 
 public class C3_Windows extends TestBase {
@@ -21,11 +23,22 @@ public class C3_Windows extends TestBase {
         // press the "click me" button which opens a new window
         driver.findElement(By.id("open-window")).click();
 
+        // this set stores ALL open windows to be able to navigate to and from different windows
         Set<String> allWindows = driver.getWindowHandles();
         System.out.println("all of the open windows handles are: ");
+
+        // the list has indices unlike a set so we can access the windows by their index
+        List<String> windowList = new ArrayList<>();
+
         for (String window : allWindows) {
             driver.switchTo().window(window);
-            System.out.println("current widow handle is: " + window + "\nwith title: " driver.getTitle());
+            windowList.add(window);
+            System.out.println("current widow handle is: " + window + "\nwith title: "+  driver.getTitle());
         }
+        // What if I want to go back to the original window
+        driver.switchTo().window(windowList.get(0));
+        System.out.println("after switching back to the original window the title is " + driver.getTitle());
+
+        // Now switch back to the new opened window
     }
 }
