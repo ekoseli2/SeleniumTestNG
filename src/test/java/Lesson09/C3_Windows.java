@@ -40,5 +40,7 @@ public class C3_Windows extends TestBase {
         System.out.println("after switching back to the original window the title is " + driver.getTitle());
 
         // Now switch back to the new opened window
+        driver.switchTo().window(windowList.get(1));
+        System.out.println("the new window's title is " + driver.getTitle());
     }
 }
