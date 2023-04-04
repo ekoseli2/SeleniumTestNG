@@ -34,7 +34,10 @@ public class DriverUtil {
 
                 case "chrome-headless" :
                     WebDriverManager.chromedriver().setup();
-                    driver = new ChromeDriver(new ChromeOptions().setHeadless(true));
+                    ChromeOptions options = new ChromeOptions();
+                    options.addArguments("--remote-allow-origins=*");
+                    options.setHeadless(true);
+                    driver = new ChromeDriver(options);
                     break;
 
                 case "firefox-headless" :
