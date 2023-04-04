@@ -15,9 +15,8 @@ public abstract class TestBase2 {
         DriverUtil.getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
     }
 
-    @Ignore
     @AfterMethod
     public void cleanUp() {
-        DriverUtil.closeDriver();
+        // DriverUtil.closeDriver();
     }
 }
