@@ -19,7 +19,6 @@ public class C3_ActionsTest extends TestBase2 {
     3) Then accept the alert that pops up
      */
     Actions actions;
-    @Ignore
     @Test
     public void doubleClickTest() {
         // 1) Go to https://demo.guru99.com/test/simple_context_menu.html
@@ -33,6 +32,7 @@ public class C3_ActionsTest extends TestBase2 {
         // 3) Then accept the alert that pops up
         Alert alert = DriverUtil.getDriver().switchTo().alert();
         alert.accept();
+        DriverUtil.closeDriver();
     }
 
     /*
@@ -41,7 +41,6 @@ public class C3_ActionsTest extends TestBase2 {
 3) Then click on edit button
 4) Accept the alert that pops up
  */
-    @Ignore
     @Test
     public void rightClickTest() {
         DriverUtil.getDriver().get(PropertiesReaderUtil.getProperties("demoguruSCM"));
@@ -54,6 +53,7 @@ public class C3_ActionsTest extends TestBase2 {
         Alert alert = DriverUtil.getDriver().switchTo().alert();
         BrowserUtils.wait(2);
         alert.accept();
+        DriverUtil.closeDriver();
     }
 
     /*
@@ -80,6 +80,13 @@ public class C3_ActionsTest extends TestBase2 {
 
         // Try this one more time with "5000" item and drop to the "Amount" on "DEBIT SIDE"
 
+        // Find the location of the dragged item
+        WebElement fiveKFrom = DriverUtil.getDriver().findElement(By.id("fourth"));
+        // Find the location to drop the dragged item
+        WebElement fiveKTo = DriverUtil.getDriver().findElement(By.id("amt7"));
+
+        actions.dragAndDrop(fiveKFrom, fiveKTo).perform();
+        DriverUtil.closeDriver();
     }
 
 }
