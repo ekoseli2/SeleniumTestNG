@@ -35,7 +35,7 @@ public class c3_ExplicitlyWait extends TestBase2 {
     public void explicitlyWaitTest() {
         WebDriverWait driverWait = new WebDriverWait(DriverUtil.getDriver(), Duration.ofSeconds(10));
         DriverUtil.getDriver().get(PropertiesReaderUtil.getProperties("google_url"));
-        driverWait.until(ExpectedConditions.titleIs("NOT Google"));
+        driverWait.until(ExpectedConditions.titleIs("Google"));
 
         WebElement searchBox = DriverUtil.getDriver().findElement(By.name("q"));
 
