@@ -26,13 +26,15 @@ public class day_07_Overview_DataTable {
     }
     @AfterMethod
     public void cleanUp() {
-        driver.quit();
+    //    driver.quit();
     }
 
     @Test
     public void tableTest() {
         SmartbearUtils.loginForSmartbearUtil(driver);
         BrowserUtils.wait(3);
+        //tr stands for Table Rows
+        //td stands for Table Data
         // This is the format to find table values in selenium
         // table element/table path/ table row/ table cell
         List<WebElement> sizeofOrders=driver.findElements(By.xpath("//table[@id='ctl00_MainContent_orderGrid']//tbody//tr"));
